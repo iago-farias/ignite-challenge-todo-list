@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: calc(0px - 1.5rem - 6px);
+  gap: 8px;
+}
+
+.taskInput {
+  padding: 1rem;
+  background-color: var(--gray-500);
+  border-radius: 8px;
+  border: 1px solid var(--gray-700);
+  color: var(--gray-100);
+  width: 100%;
+}
+
+.createButton {
+  padding: 1rem;
+  display: flex;
+  font-size: 0.875rem;
+  font-weight: 700;
+  gap: 8px;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--blue-dark);
+  color: var(--gray-100);
+  border: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.createButton:hover{
+  background-color: var(--blue);
+}
