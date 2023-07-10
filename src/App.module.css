@@ -2,3 +2,14 @@
   width: 46rem;
   margin: 0 auto;
 }
+
+@media (max-width: 768px){
+  html {
+      font-size: 87.5%;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding: 0 1rem;
+  }   
+} 

@@ -1,7 +1,6 @@
 .task {
  display: flex;
  flex-direction: row;
- align-items: start;
  justify-content: space-between;
  padding: 1rem;
  background-color: var(--gray-500);
@@ -17,7 +16,6 @@
 
 .checkboxContainer {
   display: flex;
-  position: relative;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -90,4 +88,9 @@
 .deleteButton:hover {
   background-color: var(--gray-400);
   color: var(--danger);
+}
+
+.finishedTaskText {
+  text-decoration: line-through;
+  color: var(--gray-300);
 }
