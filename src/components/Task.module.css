@@ -1,0 +1,93 @@
+.task {
+ display: flex;
+ flex-direction: row;
+ align-items: start;
+ justify-content: space-between;
+ padding: 1rem;
+ background-color: var(--gray-500);
+ border: 1px solid var(--gray-400);
+ border-radius: 8px;
+ box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+ 
+ color: var(--gray-100);
+ font-weight: 400;
+ line-height: 140%;
+ font-size: 0.875rem;
+}
+
+.checkboxContainer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.checkboxContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1rem;
+  width: 1rem;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid var(--blue);
+  transition: all 0.2s;
+}
+
+.checkboxContainer:hover input ~ .checkbox {
+  background-color: var(--blue-dark);
+}
+
+.checkboxContainer input:checked ~ .checkbox {
+  background-color: var(--purple-dark);
+  border: 2px solid var(--purple-dark);
+}
+
+.checkboxContainer:hover input:checked ~ .checkbox {
+  background-color: var(--purple);
+  border: 2px solid var(--purple);
+}
+
+.checkboxContainer:after {
+  position: absolute;
+  display: none;
+}
+
+.checkboxContainer input:checked ~ .checkbox:after {
+  display: block;
+  content: "\2713";
+  font-size: 0.875rem;
+}
+
+.deleteButton {
+  background: transparent;
+  color: var(--gray-300);
+  height: 1.5rem;
+  width: 1.5rem;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+}
+
+.deleteButton:hover {
+  background-color: var(--gray-400);
+  color: var(--danger);
+}
