@@ -24,13 +24,15 @@ export function Task({ task, deleteTask, finishTask } : TaskProps){
     <div className={styles.task}>
 
       <label className={styles.checkboxContainer} onClick={handleFinishTask}>
-        <input type="checkbox" checked={isFinished} />
+        <input type="checkbox" checked={isFinished} onChange={() => {}} />
         <span className={styles.checkbox}></span>
       </label>
 
-      <p className={isFinished ? styles.finishedTaskText : ""}>
-        {task.description}
-      </p>
+      <div>
+        <p className={isFinished ? styles.finishedTaskText : ""}>
+          {task.description}
+        </p>
+      </div>
 
       <button 
         className={styles.deleteButton}

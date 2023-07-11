@@ -1,17 +1,22 @@
 .task {
- display: flex;
- flex-direction: row;
- justify-content: space-between;
- padding: 1rem;
- background-color: var(--gray-500);
- border: 1px solid var(--gray-400);
- border-radius: 8px;
- box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
- 
- color: var(--gray-100);
- font-weight: 400;
- line-height: 140%;
- font-size: 0.875rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+
+  color: var(--gray-100);
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 0.875rem;
+}
+
+.task div {
+  width: calc(100% - 3rem);
+  margin: 0 0.75rem;
 }
 
 .checkboxContainer {

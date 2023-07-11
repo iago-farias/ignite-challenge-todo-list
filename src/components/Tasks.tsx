@@ -37,6 +37,7 @@ export function Tasks({ tasks, finishTask, deleteTask } : TaskProps){
             {
               tasks.map(task => (
                 <Task 
+                  key={task.id}
                   task={task}
                   finishTask={finishTask}
                   deleteTask={deleteTask}
