@@ -23,8 +23,13 @@ export function Task({ task, deleteTask, finishTask } : TaskProps){
   return(
     <div className={styles.task}>
 
-      <label className={styles.checkboxContainer} onClick={handleFinishTask}>
-        <input type="checkbox" checked={isFinished} onChange={() => {}} />
+      <label className={styles.checkboxContainer}>
+        <input 
+          type="checkbox" 
+          checked={isFinished} 
+          onChange={() => {}} 
+          onClick={handleFinishTask} 
+        />
         <span className={styles.checkbox}></span>
       </label>
 
