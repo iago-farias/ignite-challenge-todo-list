@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
 import { CreateNewTask } from "./components/CreateNewTask"
@@ -6,6 +6,7 @@ import { Header } from "./components/Header"
 import { Tasks } from "./components/Tasks";
 
 import styles from "./App.module.css";
+import { getTasks, saveTasks } from "./lib/localStorage";
 
 export interface TaskType {
   id: string;
@@ -16,12 +17,26 @@ export interface TaskType {
 function App() {
   const [tasks, setTasks] = useState<TaskType[]>([]);
 
+  useEffect(() => {
+    const savedTasks = getTasks();
+
+    setTasks(savedTasks);
+  }, []);
+
   function createNewTask(taskDescription: string){
-    setTasks(state => [...state, {
+    const newTask = {
       id: uuidv4(),
       description: taskDescription,
       finished: false
-    }]);
+    }
+
+    setTasks(state => {
+      const newTasks = [...state, newTask];
+
+      saveTasks(newTasks);
+
+      return newTasks;
+    });
   }
 
   function finishTask(taskId: string){
@@ -36,12 +51,14 @@ function App() {
     });
 
     setTasks(newTasks);
+    saveTasks(newTasks);
   }
 
   function deleteTask(taskId: string){
     const taskWithoutDeletedTask = tasks.filter(task => task.id !== taskId);
 
     setTasks(taskWithoutDeletedTask);
+    saveTasks(taskWithoutDeletedTask);
   }
 
   return (
