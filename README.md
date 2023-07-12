@@ -4,6 +4,19 @@ Aplicação desenvolvida durante a trilha de ReactJS, dentro do curso Ignite da 
 
 A aplicação consiste em cadastrar e manter o controle de tarefas.
 
+# Capturas de tela
+<p align="center">
+  <img alt="Screen capture" src=".gh-assets/print-1.png"/>
+</p>
+
+<p align="center">
+  <img alt="Screen capture" src=".gh-assets/print-2.png"/>
+</p>
+
+<p align="center">
+  <img alt="Screen capture" src=".gh-assets/print-3.png"/>
+</p>
+
 # Como rodar
 
 ## Instalar as dependências
